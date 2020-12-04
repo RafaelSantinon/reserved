@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    text-decoration: none;
+
+    list-style-type: none;
+
+    border: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+}
+
+/* HOME DO SITE */
+.contentIndex {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.contentIndex .indexImage :first-child {
+    width: 100%;
+    height: 100%;
+}
+
+.contentIndex .indexImage :last-child {
+    position: absolute;
+
+    margin-left: -900px;
+    margin-top: 40px;
+}
+
+.indexContent {
+    background-color: #462424;
+}
+
+.indexContent .headIndex {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    margin-top: 40px;
+}
+
+.indexContent .headIndex :first-child a {
+    padding: 12px 48px ;
+
+    margin-left: 40px;
+
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 8px;
+
+    color: black;
+}
+
+.indexContent .headIndex :last-child {
+    color: white;
+}
+
+.indexContent p {
+    padding: 40px;
+    margin-top: 200px;
+
+    text-align: center;
+
+    color: white;
+
+    font-size: 30px;
+}
+
+.indexContent .searchRestaurants {
+    margin-top: 60px;
+
+    padding: 40px;
+
+    text-align: center;
+}
+
+.indexContent .searchRestaurants input {
+    padding: 16px;
+
+    border: 1px solid white;
+    border-radius: 8px;
+}
+
+.indexContent .searchRestaurants button {
+    padding: 16px;
+
+    background-color: white;
+
+    border: 1px solid white;
+    border-radius: 8px;
+
+    color: black;
+
+    cursor: pointer;
+}
+
+/* REGISTER PAGE */
+
+header {
+    background-color: #462424;
+
+    display: flex;
+    justify-content: space-between;
+
+    height: 60px;
+}
+
+header a {
+    margin: auto 40px;
+
+    color: white;
+}
+
+header img {
+    height: 80%;
+
+    margin: auto 40px
+}
+
+.formInformations{
+    margin: 200px auto auto auto;
+
+    background-color: #462424;
+
+    border: 1px solid;
+    border-radius: 40px;
+}
+
+.formInformations form {
+    padding: 100px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.formInformations form h1{
+    color: white;
+
+    margin-bottom: 40px;
+    margin-top: -60px;
+
+    font-size: 24px;
+}
+
+.formInformations form input {
+    padding: 12px;
+
+    margin-bottom: 8px;
+    border-radius: 8px;
+}
+
+.formInformations form button {
+    padding: 12px;
+
+    margin-bottom: -20px;
+    border-radius: 8px;
+
+    background-color: gray;
+
+    cursor: pointer;
+}
+
+/* FORM RESTAURANT */
+
+.formInformationsRestaurant {
+    margin: 100px auto;
+
+    background-color: #462424;
+
+    border: 1px solid;
+    border-radius: 40px;
+}
+
+.formInformationsRestaurant form {
+    padding: 80px 160px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.formInformationsRestaurant div {
+    margin-bottom: 40px;
+}
+
+.formInformationsRestaurant div h2 {
+    color: white;
+}
+
+.formInformationsRestaurant div input {
+    padding: 12px;
+
+    margin-bottom: 8px;
+    border-radius: 8px;
+
+    width: 400px;
+}
+
+.formInformationsRestaurant div textarea {
+    padding: 12px;
+
+    margin-bottom: 8px;
+    border-radius: 8px;
+
+    width: 400px;
+    height: 200px;
+}
+
+.formInformationsRestaurant form button {
+    padding: 12px;
+
+    margin-bottom: -20px;
+    border-radius: 8px;
+
+    background-color: gray;
+
+    cursor: pointer;
+}
+
+/* RESTAURANTS SEARCH */
+
+.restaurants {
+    margin-top: 20px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+
+    align-items: center;
+}
+
+.restaurant {
+    background-color:  #462424;
+
+    margin-left: 150px;
+
+    width: 400px;
+
+    border: 1px solid;
+    border-radius: 12px;
+
+    color: white;
+
+    text-align: center;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.restaurant .menu a {
+    background-color: gray;
+
+    color: white;
+
+    padding: 6px;
+    border-radius: 6px;
+}
+
+.tables {
+    margin: 100px auto;
+
+    width: 800px;
+
+    border: 1px solid black;
+    border-radius: 40px;
+
+    background-color: #462424;
+}
+
+.tables h1 {
+    margin-top: 24px;
+    color: white;
+
+    font-size: 24px;
+
+    text-align: center;
+}
+
+.tables li {
+    margin-top: 48px;
+
+    margin-left: 24px;
+    margin-bottom: 48px;
+}
+
+.tables ul {
+    color: white;
+
+    font-size: 20px;
+
+    margin-bottom: 8px;
+}
+
+.tables .tables-button {
+    margin: 24px auto;
+    margin-left: 360px;
+    margin-right: 40px;
+
+    font-size: 24px;
+
+    background-color: gray;
+
+    text-align: center;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.tables .tables-button a {
+    color: black;
+}
+
+/* FORM RESERVED TABLE */
+
+.table-for-reserved {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    margin-bottom: 24px;
+    margin-right: 24px;
+}
+
+.table-for-reserved h3 {
+    padding: 8px;
+
+    color: white;
+}
+
+.table-for-reserved input {
+    padding: 8px;
+
+    margin-right: 8px;
+
+    border: 1px solid white;
+    border-radius: 4px;
+}
+
+.table-for-reserved button {
+    border: 1px solid gray;
+    border-radius: 4px;
+
+    background-color: gray;
+
+    cursor: pointer;
+}

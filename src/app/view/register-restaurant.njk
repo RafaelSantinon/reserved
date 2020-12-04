@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title>Reserved - Cadatro restaurante</title>
+
+    </head>
+
+    <link rel="stylesheet" href="/main.css">
+
+    <body>
+        <header>
+            <a href="/">Sair</a>
+            <img src="/assets/logo.png" alt="">
+        </header>
+
+        <div class="formInformationsRestaurant">
+            <form action="/create-restaurant" method="POST">
+                <div class="card">
+                    <h2>Nome do estabelecimento</h2>
+                    <input type="text" name="name" placeholder="Nome">
+                </div>
+
+                <div class="card">
+                    <h2>Descrição</h2>
+                    <textarea name="description" placeholder="Breve resumo sobre o estabelecimento"></textarea>
+                </div>
+
+                <div class="card">
+                    <h2>Horário</h2>
+                    <input type="text" name="schedule" placeholder="Informar dias e horário de funcionamento">
+                </div>
+
+                <div class="card">
+                    <h2>Localização</h2>
+                    <input type="text" name="city" placeholder="Cidade">
+                </div>
+
+                <div class="card">
+                    <input type="text" name="street" placeholder="Rua e número">
+                </div>
+
+                <div class="card">
+                    <input type="text" name="location" placeholder="Bairro ">
+                </div>
+
+                <div class="card">
+                    <input type="text" name="cep" placeholder="CEP">
+                </div>
+
+                <div class="item">
+                    <h2>Cardápio</h2>
+                    <div id="ingredients">
+                        <div class="ingredient">
+                            <input type="text" name="menu[]" value="" placeholder="Informe o item no cardápio" />
+                        </div>
+                    </div>
+                    <button type="button" class="add-ingredient">Novo item no cardápio</button>
+                </div>
+
+                <input type="hidden" name="user_id" value="{{productId}}">
+
+            <button type="submit">CADASTRAR</button>
+            </form>
+        </div>
+
+        <script src="/createNewField.js"></script>
+
+    </body>
+
+</html>

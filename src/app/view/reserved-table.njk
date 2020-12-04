@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title>Reserved - Mesas</title>
+
+    </head>
+
+    <link rel="stylesheet" href="/main.css">
+
+    <body>
+        <header>
+            <a href="/">Inicio</a>
+            <img src="/assets/logo.png" alt="">
+        </header>
+
+        <div class="tables">
+            <h1>Mesas</h1>
+
+            <li class="table">
+                {% for table in tables %}
+                    <div class="table-reserved">
+                        <form action="/reserved-table?_method=PUT" class="table-for-reserved" method="POST">
+                            <h3>Mesa número: {{table.number}}</h3>
+                            <h3>Lugares: {{table.seats}}</h3>
+                            {% if table.user_reserved == null %}
+                                <input type="text" name="nameReserved" placeholder="Digite o nome para reserva">
+                                <input type="hidden" name="tableId" value="{{table.id}}">
+                                <button type="submit">Reservar</button>
+                            {% endif %}
+                            {% if table.user_reserved != null %}
+                                <h3>Mesa reservada</h3>
+                            {% endif %}
+                        </form>
+                    </div>
+                {% endfor %}
+            </li>
+        </div>
+        
+    </body>
+
+</html>

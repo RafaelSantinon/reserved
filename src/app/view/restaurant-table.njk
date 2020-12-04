@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title>Reserved - Mesas</title>
+
+    </head>
+
+    <link rel="stylesheet" href="/main.css">
+
+    <body>
+        <header>
+            <a href="/">Sair</a>
+            <img src="/assets/logo.png" alt="">
+        </header>
+
+        <div class="tables">
+            <h1>Mesas</h1>
+
+            <div class="table">
+                {% for table in tables %}
+                    <div class="table-reserved">
+                        <form action="/free-table?_method=PUT" class="table-for-reserved" method="POST">
+                            <h3>Mesa número: {{table.number}}</h3>
+                            <h3>Lugares: {{table.seats}}</h3>
+                            <h3>Reservado: {{table.user_reserved}}</h3>
+                            <input type="hidden" name="tableId" value="{{table.id}}">
+                            <input type="hidden" name="restauranteId" value="{{table.restaurant_id}}">
+                        <button type="submit">Liberar</button>
+                        </form>
+                    </div>
+                {% endfor %}
+            </div>
+
+        </div>
+        
+    </body>
+
+</html>

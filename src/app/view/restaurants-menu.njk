@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title>Reserved - Cardapio</title>
+
+    </head>
+
+    <link rel="stylesheet" href="/main.css">
+
+    <body>
+        <header>
+            <a href="/">Inicio</a>
+            <img src="/assets/logo.png" alt="">
+        </header>
+
+        <div class="tables">
+            <h1>Itens no Cardápio</h1>
+
+            <li class="table">
+                {% for menu in menus %}
+                    <ul>{{menu}}</ul>
+                {% endfor %}
+            </li>
+
+            <div class="tables-button">
+                <a href="/reserved-table/{{id}}">Reservar mesa</a>
+            </div>
+        </div>
+        
+    </body>
+
+</html>

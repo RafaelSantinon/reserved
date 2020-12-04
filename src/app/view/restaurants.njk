@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title>Reserved - Cadatro</title>
+
+    </head>
+
+    <link rel="stylesheet" href="/main.css">
+
+    <body>
+        <header>
+            <a href="/">Voltar</a>
+            <img src="/assets/logo.png" alt="">
+        </header>
+
+        <div class="restaurants">
+            {% for restaurant in restaurants %}
+                <div class="restaurant">
+                    <div class="content">
+                        <h1>{{restaurant.name}}</h1>
+                        <p>{{restaurant.description}}</p>
+                        <p>localização: {{restaurant.location}}</p>
+                    </div>
+
+                    <div class="menu">
+                        <a href="/restaurant-menu/{{restaurant.id}}">Cardápio</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </body>
+
+</html>

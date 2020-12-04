@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title>Reserved - Cadatro de mesas</title>
+
+    </head>
+
+    <link rel="stylesheet" href="/main.css">
+
+    <body>
+        <header>
+            <a href="/">Sair</a>
+            <img src="/assets/logo.png" alt="">
+        </header>
+
+        <div class="formInformationsRestaurant">
+            <form action="/create-restaurant-tables" method="POST">
+
+                <div class="item">
+                    <h2>Adicionar mesas</h2>
+                    <div id="ingredients">
+                        <div class="ingredient">
+                            <input type="number" name="number" value="" placeholder="Informe o número da mesa" />
+                        </div>
+                        <input type="number" name="seats" value="" placeholder="Informe a quantidade de lugares" />
+                    </div>
+                </div>
+                
+
+                <input type="hidden" name="restaurant_id" value="{{restaurantId}}">
+
+            <button type="submit">CADASTRAR</button>
+            </form>
+        </div>
+
+    </body>
+
+</html>
